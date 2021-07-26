@@ -1,25 +1,25 @@
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
-import { List } from "./pages/List";
-import { Detail } from "./pages/Detail";
-
 import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter basename="car">
+    <BrowserRouter>
       <div>
-        <Link to="/detail">Detail</Link>
-        <Link to="/list">List</Link>
+        <Link to="/main">main</Link>
+        <br />
+        <Link to="/car">car</Link>
+        <br />
+        <Link to="/user">user</Link>
       </div>
 
       <Switch>
-        <Route path="/list">
-          <List />
+        <Route path="/main">
+          <div>main</div>
         </Route>
 
-        <Route path="/detail">
-          <Detail />
+        <Route>
+          <section id="frame"></section>
         </Route>
       </Switch>
     </BrowserRouter>
