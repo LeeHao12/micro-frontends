@@ -10,6 +10,7 @@ function App() {
     <BrowserRouter basename="car">
       <div>
         <Link to="/detail">Car Detail</Link>
+        <span> | - |</span>
         <Link to="/list">Car List</Link>
       </div>
 
