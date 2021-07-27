@@ -13,13 +13,13 @@ const apps = [
    * activeRule: 微应用触发的路由规则 - 触发路由规则后将加载该微应用
    */
   {
-    name: "ReactMicroAppCar",
+    name: "react-car-repo",
     entry: "//localhost:10100",
     container: "#frame",
     activeRule: "/car",
   },
   {
-    name: "UserApp",
+    name: "react-user-repo",
     entry: "//localhost:10101",
     container: "#frame",
     activeRule: "/user",

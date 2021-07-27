@@ -2,26 +2,38 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
 
+function Container() {
+  return (
+    <Switch>
+      <Route path="/main">
+        <div>main</div>
+      </Route>
+
+      <Route>
+        <section id="frame"></section>
+      </Route>
+    </Switch>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Link to="/main">main</Link>
-        <br />
-        <Link to="/car">car</Link>
-        <br />
-        <Link to="/user">user</Link>
+      <div className="root">
+        <div className="tab">
+          <Link className="tabItem" to="/main">
+            main
+          </Link>
+          <Link className="tabItem" to="/car">
+            car
+          </Link>
+          <Link className="tabItem" to="/user">
+            user
+          </Link>
+        </div>
+
+        <Container />
       </div>
-
-      <Switch>
-        <Route path="/main">
-          <div>main</div>
-        </Route>
-
-        <Route>
-          <section id="frame"></section>
-        </Route>
-      </Switch>
     </BrowserRouter>
   );
 }
